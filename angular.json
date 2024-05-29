@@ -100,6 +100,37 @@
           }
         }
       }
+    },
+    "polari-flow-lib": {
+      "projectType": "library",
+      "root": "projects/polari-flow-lib",
+      "sourceRoot": "projects/polari-flow-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/polari-flow-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/polari-flow-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/polari-flow-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/polari-flow-lib/src/test.ts",
+            "tsConfig": "projects/polari-flow-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/polari-flow-lib/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "polari-flow-demo"

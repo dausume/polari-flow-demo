@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+    "projects": {
+      "polari-flow-lib": {
+        "root": "polari-flow-lib",
+        "sourceRoot": "polari-flow-lib/src",
+        "projectType": "library",
+        "architect": {
+          "build": {
+            "builder": "@angular-devkit/build-ng-packagr:build",
+            "options": {
+              "tsConfig": "polari-flow-lib/tsconfig.lib.json",
+              "project": "polari-flow-lib/ng-package.json"
+            }
+          }
+        }
+      }
+    }
+  }
+  
